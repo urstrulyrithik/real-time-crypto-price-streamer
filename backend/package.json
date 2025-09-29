@@ -1,0 +1,27 @@
+
+
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "playwright:install": "playwright install"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^1.6.0",
+    "@connectrpc/connect": "^1.2.0",
+    "@connectrpc/connect-node": "^1.2.0",
+    "cors": "^2.8.5",
+    "ws": "^8.18.3",
+    "playwright": "^1.46.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/node": "^20.10.5",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.3"
+  }
+}

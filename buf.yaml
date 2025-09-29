@@ -1,0 +1,8 @@
+version: v1
+name: buf.build/urstrulyrithik/crypto-streamer
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - DEFAULT

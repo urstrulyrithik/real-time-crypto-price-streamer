@@ -1,0 +1,14 @@
+version: v1
+plugins:
+  - plugin: es
+    out: frontend/lib/generated
+    opt: target=ts
+  - plugin: connect-es
+    out: frontend/lib/generated
+    opt: target=ts
+  - plugin: es
+    out: backend/src/generated
+    opt: target=ts
+  - plugin: connect-es
+    out: backend/src/generated
+    opt: target=ts

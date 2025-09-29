@@ -1,0 +1,24 @@
+// tsconfig gist:
+// - Targets modern JS (ES2022) with ES module output (good for Node ESM & Next.js).
+// - Uses Node-style module resolution and includes DOM types for Playwright page scripts.
+// - Strict typing on; interop flags for smooth CJS/ESM imports; faster builds via skipLibCheck.
+// - Compiles from ./src to ./dist and ignores node_modules/dist.
+
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": ["ES2022", "DOM"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

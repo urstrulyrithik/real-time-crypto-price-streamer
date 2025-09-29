@@ -1,0 +1,15 @@
+{
+  "name": "crypto-price-streamer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "pnpm install --recursive",
+    "generate": "buf generate",
+    "dev": "./run.sh"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.28.1",
+    "@bufbuild/protoc-gen-es": "^1.6.0",
+    "@connectrpc/protoc-gen-connect-es": "^1.2.0"
+  }
+}

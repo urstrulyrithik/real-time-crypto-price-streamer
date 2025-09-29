@@ -1,0 +1,20 @@
+# Node / PNPM
+node_modules/
+.pnpm-store/
+pnpm-lock.yaml
+
+# Build & caches
+dist/
+build/
+coverage/
+*.tsbuildinfo
+.next/
+frontend/.next/
+backend/.next/
+playwright/.cache/
+playwright-report/
+.vscode/
+.DS_Store
+
+# Generated protobuf code
+**/generated/

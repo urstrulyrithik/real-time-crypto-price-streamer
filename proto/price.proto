@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package price;
+
+message Ticker {
+  string symbol = 1;
+  string price = 2;
+  string change = 3;
+  string changePercent = 4;
+  int64 timestamp = 5;
+}
+
+message AddTickerRequest {
+  string symbol = 1;
+}
+
+message AddTickerResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message RemoveTickerRequest {
+  string symbol = 1;
+}
+
+message RemoveTickerResponse {
+  bool success = 1;
+}
+
+message StreamPricesRequest {}
+
+message TickerUpdate {
+  Ticker ticker = 1;
+}
+
+service PriceService {
+  rpc AddTicker(AddTickerRequest) returns (AddTickerResponse);
+  rpc RemoveTicker(RemoveTickerRequest) returns (RemoveTickerResponse);
+  rpc StreamPrices(StreamPricesRequest) returns (stream TickerUpdate);
+}
